@@ -16,9 +16,9 @@ export const Form = () => {
     const [pnum, setPnum] = useState(0);
     const [amtPaid, setAmtPaid] = useState(0);
     const [list, setList] = useState([]);
-    const [title, setTitle] = useState("");
-    const [error, setError] = useState(null);
-    const [subTotal, setSubTotal] = useState(100);
+    // const [title, setTitle] = useState("");
+    // const [error, setError] = useState(null);
+     const [subTotal] = useState(100);
     const [total, setTotal] = useState(0);
     const [due, setDue] = useState(0);
     const [date, setDate] = useState();
@@ -52,6 +52,7 @@ export const Form = () => {
     }
 
 
+console.log(list);
 
     useEffect(() => {
         setTotal(subTotal - discount);
