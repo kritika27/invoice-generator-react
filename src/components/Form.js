@@ -52,7 +52,7 @@ export const Form = () => {
     }
 
 
-console.log(list);
+
 
     useEffect(() => {
         setTotal(subTotal - discount);
