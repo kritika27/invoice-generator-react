@@ -6,14 +6,15 @@ const Navbar = () => {
             <nav>
 
                 <h1>Invoice Generator</h1>
-                <ul>
+                <ul className="menu">
                     <li>Help</li>
                     <li>Invoicing Guide</li>
                     <li>Sign In</li>
                 </ul>
                 <button className="btn">Sign Up</button>
-                <ul>
-                    <li></li>
+
+                <ul className="links">
+                    <li><i className="fa fa-bars" aria-hidden="true"></i></li>
                 </ul>
             </nav>
 
