@@ -97,7 +97,7 @@ export const Form = () => {
                             onChange={(e) => setFrom(e.target.value)}
                         />
                         <div className="bill">
-                            <div style={{ display: "flex", flexDirection: "column" }}>
+                            <div style={{ display: "flex", flexDirection: "column",margin:"10px" }}>
                                 <label
                                     style={{ margin: "15px", color: "gray", fontFamily: "Helvetika,sans-serif", fontSize: "14px" }}
                                 >Bill To</label>
@@ -106,7 +106,7 @@ export const Form = () => {
                                     onChange={(e) => setBillTo(e.target.value)}
                                 />
                             </div>
-                            <div style={{ display: "flex", flexDirection: "column" }}>
+                            <div style={{ display: "flex", flexDirection: "column",margin:"10px" }}>
                                 <label
                                     style={{ margin: "15px", color: "gray", fontFamily: "Helvetika,sans-serif", fontSize: "14px" }}
                                 >Ship To</label>
