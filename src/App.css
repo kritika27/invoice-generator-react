@@ -216,13 +216,39 @@ form>p {
   margin: 50px;
 }
 
-textarea {
+.from{
+  
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    width: 21vw;
+    height: 10vh;
+  
+}
+
+.billto{
+  
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    width: 15vw;
+    height: 10vh;
+  
+}
+.note{
+  resize: none;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  width: 33.5vw;
+  height: 10vh;
+}
+/* textarea {
   resize: none;
   border: 1px solid lightgray;
   border-radius: 3px;
   width: 21vw;
   height: 10vh;
-}
+} */
 
 ::placeholder {
   padding: 10px;

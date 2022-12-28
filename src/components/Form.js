@@ -92,6 +92,7 @@ export const Form = () => {
                     <div className="row2">
 
                         <textarea
+                        className="from"
                             placeholder="Who is this invoice from? (required)"
                             value={from}
                             onChange={(e) => setFrom(e.target.value)}
@@ -101,7 +102,9 @@ export const Form = () => {
                                 <label
                                     style={{ margin: "15px", color: "gray", fontFamily: "Helvetika,sans-serif", fontSize: "14px" }}
                                 >Bill To</label>
-                                <textarea placeholder="Who is this invoice to? (required)"
+                                <textarea
+                                className="billto"
+                                placeholder="Who is this invoice to? (required)"
                                     value={billTo}
                                     onChange={(e) => setBillTo(e.target.value)}
                                 />
@@ -110,7 +113,9 @@ export const Form = () => {
                                 <label
                                     style={{ margin: "15px", color: "gray", fontFamily: "Helvetika,sans-serif", fontSize: "14px" }}
                                 >Ship To</label>
-                                <textarea placeholder="(optional)"
+                                <textarea 
+                                className="billto"
+                                placeholder="(optional)"
                                     value={shipTo}
                                     onChange={(e) => setShipTo(e.target.value)}
                                 />
@@ -155,11 +160,13 @@ export const Form = () => {
                             <label
                                 style={{ margin: "15px", color: "gray", fontFamily: "Helvetika,sans-serif", fontSize: "14px" }}>Notes</label>
                             <textarea value={notes}
+                            className="note"
                                 placeholder="Notes - any relevant information not already covered"
                                 onChange={(e) => setNotes(e.target.value)}
                             />
                             <label style={{ margin: "15px", color: "gray", fontFamily: "Helvetika,sans-serif", fontSize: "14px" }}>Terms</label>
                             <textarea value={terms}
+                            className="note"
                                 placeholder="Terms and conditions - late fees, payment methods, delivery schedule"
                                 onChange={(e) => setTerms(e.target.value)}
                             />
