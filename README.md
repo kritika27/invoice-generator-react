@@ -11,7 +11,7 @@ It is an Invoice Generator App built in ReactJS. It facilitates the user to down
 ## Screenshot
 
 Homepage
-![Invoice](https://user-images.githubusercontent.com/4997491/212185057-17451368-8226-4bb5-9aca-f39b9fc6bfe7.PNG)
+![Invoice](https://user-images.githubusercontent.com/4997491/212186222-d93f3084-a5dc-4d7d-8689-d52fdad871ee.PNG)
 
 
 ## Installation
