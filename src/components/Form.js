@@ -25,6 +25,11 @@ export const Form = () => {
     const [dueDate, setDueDate] = useState();
     const [discount, setDiscount] = useState(0);
     const [hasDiscount, setHasDiscount] = useState(false);
+    const [tax, setTax] = useState(0);
+    const [hasTax, setHasTax] = useState(false);
+    const [shipping, setShipping] = useState(0);
+    const [hasShipping, setHasShipping] = useState(false);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -174,9 +179,17 @@ export const Form = () => {
                     </div>
                     <div className='col3'>
                         <p>Subtotal ${subTotal}</p>
+                        <div style={{display:"flex"}}>
                         {!hasDiscount && <div style={{ display: "flex", color: "#009E74", fontWeight: "bold" }}>
                             <p onClick={() => setHasDiscount(!hasDiscount)} style={{ cursor: "pointer" }}>+ Discount</p>
                         </div>}
+                        {!hasTax && <div style={{ display: "flex", color: "#009E74", fontWeight: "bold" }}>
+                            <p onClick={() => setHasTax(!hasTax)} style={{ cursor: "pointer" }}>+ Tax</p>
+                        </div>}
+                        {!hasShipping && <div style={{ display: "flex", color: "#009E74", fontWeight: "bold" }}>
+                            <p onClick={() => setHasShipping(!hasShipping)} style={{ cursor: "pointer" }}>+ Shipping</p>
+                        </div>}
+                        </div>
                         {
                             hasDiscount && <div><input type="text" value={discount}
                                 className='invnumber1'
@@ -187,6 +200,32 @@ export const Form = () => {
                                 <i
                                     onClick={
                                         () => setHasDiscount(!hasDiscount)
+                                    }
+                                    className="fa fa-close"></i></div>
+                        }
+                        {
+                            hasTax && <div><input type="text" value={tax}
+                                className='invnumber1'
+                                style={{ direction: "RTL" }}
+                                onChange={(e) => setTax(e.target.value)}
+                            />
+
+                                <i
+                                    onClick={
+                                        () => setHasTax(!hasTax)
+                                    }
+                                    className="fa fa-close"></i></div>
+                        }
+                        {
+                            hasShipping && <div><input type="text" value={shipping}
+                                className='invnumber1'
+                                style={{ direction: "RTL" }}
+                                onChange={(e) => setShipping(e.target.value)}
+                            />
+
+                                <i
+                                    onClick={
+                                        () => setHasShipping(!hasShipping)
                                     }
                                     className="fa fa-close"></i></div>
                         }
@@ -224,7 +263,19 @@ export const Form = () => {
                     className="btn-disabled"
                     >Send Invoice</button>
             </div>}
-
+<div>
+    <h2>CURRENCY</h2>
+    <select>
+        <option value="USD $">USD ($)</option>
+        <option value="EUR">EUR </option>
+    </select>
+</div>
+<div>
+    <h2>TYPE</h2>
+    <select>
+        <option value="INVOICE">Invoice</option>
+    </select>
+</div>
         </main>
     )
 }
